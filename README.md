@@ -7,7 +7,3 @@
 - cd secret-board
 - npm install
 - npm start
-
-# Author
-
-* yoshifoxor
