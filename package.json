@@ -11,6 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "http-auth": "^3.2.4",
-    "pug": "^2.0.4"
+    "pg": "7",
+    "pg-hstore": "2",
+    "pug": "^2.0.4",
+    "sequelize": "4"
   }
 }
