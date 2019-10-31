@@ -1,3 +1,4 @@
 node_modules/
 .userp
-.htpasswd
+*.htpasswd
+config.js
