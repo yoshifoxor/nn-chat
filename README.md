@@ -2,7 +2,7 @@
 
 # Usage
 
-- Fork and clone  or Download this repositoty.
+- Fork and clone or Download this repositoty.
 
 - cd secret-board
 - npm install
