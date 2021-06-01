@@ -2,32 +2,40 @@ doctype html
 html(lang="ja")
   head
     meta(charset="UTF-8")
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css", integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2", crossorigin="anonymous")
     title 秘密の匿名掲示板
-  body
-    h1 秘密の匿名掲示板
-    a(href="/logout") ログアウト
+  body.container
+    div.my-3
+      a(href="/logout").btn.btn-info.float-right ログアウト
+      h1 秘密の匿名掲示板
     h2 新規投稿
     form(method="post" action="/posts")
-      div
-        textarea(name="content" cols=40 rows=4)
-      div
-        button(type="submit") 投稿
+      div.form-group
+        textarea(name="content" rows="4").form-control
+      div.form-group
+        button(type="submit").btn.btn-primary 投稿
 
     h2 投稿一覧
     each post in posts
-      - var isPostedByAdmin = (post.postedBy === 'admin')
-      if isPostedByAdmin
-        h3 #{post.id} : 管理人 ★
-      else
-        h3 #{post.id} : ID:#{post.trackingCookie}
-      p!= post.content
-      p 投稿日時: #{post.createdAt}
-      - var isAdmin = (user === 'admin')
-      if isAdmin
-        p 投稿者: #{post.postedBy}
-      - var isDeletable = (user === post.postedBy || isAdmin)
-      if isDeletable
-        form(method="post" action="/posts?delete=1")
-          input(type="hidden" name="id" value=post.id)
-          button(type="submit") 削除
-      hr
+      div.card.my-3
+        div.card-header
+          - var isPostedByAdmin = (post.postedBy === 'admin')
+          if isPostedByAdmin
+            span #{post.id} : 管理人 ★
+          else
+            span #{post.id} : ID:#{post.trackingCookie}
+        div.card-body
+          p.card-text!=post.content
+        div.card-footer
+          div 投稿日時: #{post.formattedCreatedAt}
+          - var isAdmin = (user === 'admin')
+          if isAdmin
+            div 投稿者: #{post.postedBy}
+          - var isDeletable = (user === post.postedBy || isAdmin)
+          if isDeletable
+            form(method="post" action="/posts?delete=1")
+              input(type="hidden" name="id" value=post.id)
+              button(type="submit").btn.btn-danger.float-right 削除
+
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js", integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj", crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js", integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx", crossorigin="anonymous")
