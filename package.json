@@ -1,0 +1,15 @@
+{
+  "name": "secret-board",
+  "version": "1.0.320",
+  "description": "秘密の匿名掲示板",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": "https://github.com/yoshifoxor/secret-board.git",
+  "author": "yoshifoxor <yshs.adachi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "pug": "~3"
+  }
+}
