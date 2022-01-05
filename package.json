@@ -1,6 +1,6 @@
 {
   "name": "secret-board",
-  "version": "1.0.321",
+  "version": "1.0.322",
   "description": "秘密の匿名掲示板",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,9 @@
   "license": "MIT",
   "dependencies": {
     "http-auth": "4.1.7",
-    "pug": "~3"
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "pug": "~3",
+    "sequelize": "^6.12.5"
   }
 }
