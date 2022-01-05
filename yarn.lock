@@ -25,6 +25,18 @@ acorn@^7.1.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
+apache-crypt@^1.1.2:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/apache-crypt/-/apache-crypt-1.2.5.tgz#4eb6b6dbaed2041ce5bc2d802f4421f5fdadc25e"
+  integrity sha512-ICnYQH+DFVmw+S4Q0QY2XRXD8Ne8ewh8HgbuFH4K7022zCxgHM0Hz1xkRnUlEfAXNbwp1Cnhbedu60USIfDxvg==
+  dependencies:
+    unix-crypt-td-js "^1.1.4"
+
+apache-md5@^1.0.6:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/apache-md5/-/apache-md5-1.1.7.tgz#dcef1802700cc231d60c5e08fd088f2f9b36375a"
+  integrity sha512-JtHjzZmJxtzfTSjsCyHgPR155HBe5WGyUyHTaEkfy46qhwCFKx1Epm6nAxgUG3WfUZP1dWhGqj9Z2NOBeZ+uBw==
+
 asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
@@ -41,6 +53,11 @@ babel-walk@3.0.0-canary-5:
   integrity sha512-GAwkz0AihzY5bkwIY5QDR+LvsRQgB/B+1foMPvi0FZPMl5fjD7ICiznUiBdLYMH1QYe6vqu4gWYytZOccLouFw==
   dependencies:
     "@babel/types" "^7.9.6"
+
+bcryptjs@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+  integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
 
 call-bind@^1.0.2:
   version "1.0.2"
@@ -102,6 +119,16 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
+
+http-auth@4.1.7:
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/http-auth/-/http-auth-4.1.7.tgz#0b8119c83813bd7ac4a934c04a2f8c568b2107ee"
+  integrity sha512-LdftJKxCOpEE56ESgg8uODQ+f+P+0ZHN+PZblIT3YX+c1hDINiI6eNDZ/jm+ji+oqeP+RAW7RuIvt76vqiOLnQ==
+  dependencies:
+    apache-crypt "^1.1.2"
+    apache-md5 "^1.0.6"
+    bcryptjs "^2.4.3"
+    uuid "^3.4.0"
 
 is-core-module@^2.8.0:
   version "2.8.0"
@@ -287,6 +314,16 @@ token-stream@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/token-stream/-/token-stream-1.0.0.tgz#cc200eab2613f4166d27ff9afc7ca56d49df6eb4"
   integrity sha1-zCAOqyYT9BZtJ/+a/HylbUnfbrQ=
+
+unix-crypt-td-js@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/unix-crypt-td-js/-/unix-crypt-td-js-1.1.4.tgz#4912dfad1c8aeb7d20fa0a39e4c31918c1d5d5dd"
+  integrity sha512-8rMeVYWSIyccIJscb9NdCfZKSRBKYTeVnwmiRYT2ulE3qd1RaDQ0xQDP+rI3ccIWbhu/zuo5cgN8z73belNZgw==
+
+uuid@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
+  integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
 void-elements@^3.1.0:
   version "3.1.0"

@@ -1,6 +1,6 @@
 {
   "name": "secret-board",
-  "version": "1.0.320",
+  "version": "1.0.321",
   "description": "秘密の匿名掲示板",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "author": "yoshifoxor <yshs.adachi@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "http-auth": "4.1.7",
     "pug": "~3"
   }
 }
