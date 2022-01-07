@@ -18,4 +18,9 @@ html(lang="ja")
       h3 #{post.id} : ID:#{post.trackingCookie}
       p #{post.content}
       p 投稿日時: #{post.createdAt}
+      - let isDeletable = (user === post.postedBy)
+      if isDeletable
+        form(action="/posts?delete=1", method="post")
+          input(type="hidden" name="id" value=post.id)
+          button(type="submit") 削除
       hr
