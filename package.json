@@ -1,6 +1,6 @@
 {
   "name": "secret-board",
-  "version": "1.0.330",
+  "version": "1.0.331",
   "description": "秘密の匿名掲示板",
   "main": "index.js",
   "scripts": {
