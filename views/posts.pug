@@ -12,6 +12,7 @@ html(lang="ja")
     form(action="/posts", method="post")
       div.form-group
         textarea(name="content", rows=4).form-control
+        input(type="hidden", name="oneTimeToken", value=oneTimeToken)
       div.form-group
         button(type="submit").btn.btn-primary 投稿
     h2 投稿一覧
@@ -35,6 +36,7 @@ html(lang="ja")
           if isDeletable
             form(method="post" action="/posts?delete=1")
               input(type="hidden" name="id" value=post.id)
+              input(type="hidden" name="oneTimeToken" value=oneTimeToken)
               button(type="submit").btn.btn-danger.float-right 削除
 
     script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js", integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj", crossorigin="anonymous")
