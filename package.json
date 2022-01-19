@@ -1,6 +1,6 @@
 {
   "name": "secret-board",
-  "version": "1.0.332",
+  "version": "1.0.333",
   "description": "秘密の匿名掲示板",
   "main": "index.js",
   "scripts": {
@@ -17,5 +17,8 @@
     "pg-hstore": "^2.3.4",
     "pug": "~3",
     "sequelize": "^6.12.5"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
