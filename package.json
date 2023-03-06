@@ -1,12 +1,12 @@
 {
-  "name": "secret-board",
-  "version": "1.0.320",
-  "description": "秘密の匿名掲示板",
+  "name": "nn-chat",
+  "version": "1.2022.320",
+  "description": "NNチャット",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
-  "repository": "https://github.com/yoshifoxor/secret-board.git",
+  "repository": "https://github.com/yoshifoxor/nn-chat.git",
   "author": "yoshifoxor <yshs.adachi@gmail.com>",
   "license": "MIT",
   "dependencies": {
