@@ -11,5 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "pug": "~3"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
