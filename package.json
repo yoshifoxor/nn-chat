@@ -1,6 +1,6 @@
 {
   "name": "nn-chat",
-  "version": "1.2022.321",
+  "version": "1.2022.322",
   "description": "NNチャット",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,10 @@
   "dependencies": {
     "http-auth": "^4.2.0",
     "ip": "^1.1.8",
-    "pug": "~3"
+    "pg": "^8.10.0",
+    "pg-hstore": "^2.3.4",
+    "pug": "~3",
+    "sequelize": "^6.29.3"
   },
   "engines": {
     "node": ">=18"

@@ -13,6 +13,7 @@ html(lang="ja")
         button(type="submit") 送信
 
   h2 投稿一覧
-  each content in contents
-    p #{content}
+  each post in posts
+    p 送信日時: #{post.createdAt}
+    p #{post.content}
     hr
