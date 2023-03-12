@@ -12,8 +12,13 @@ html(lang="ja")
       div
         button(type="submit") 送信
 
-  h2 投稿一覧
-  each post in posts
-    p 送信日時: #{post.createdAt}
-    p #{post.content}
-    hr
+    h2 投稿一覧
+    each post in posts
+      p 送信日時: #{post.createdAt}
+      p #{post.content}
+      - let isDeletable = (user === post.postedBy)
+      if isDeletable
+        form(action="/posts/delete" method="post")
+          input(type="hidden" name="id" value=post.id)
+          button(type="submit") 削除
+      hr
