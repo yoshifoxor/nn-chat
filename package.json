@@ -1,6 +1,6 @@
 {
   "name": "nn-chat",
-  "version": "1.2022.326",
+  "version": "1.2022.331",
   "description": "NNチャット",
   "main": "index.js",
   "scripts": {
