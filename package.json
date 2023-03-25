@@ -1,24 +1,25 @@
 {
-  "name": "secret-board",
-  "version": "1.0.333",
-  "description": "秘密の匿名掲示板",
+  "name": "nn-chat",
+  "version": "1.2022.331",
+  "description": "NNチャット",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
-  "repository": "https://github.com/yoshifoxor/secret-board.git",
+  "repository": "https://github.com/yoshifoxor/nn-chat.git",
   "author": "yoshifoxor <yshs.adachi@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "cookies": "^0.8.0",
-    "dayjs": "^1.10.7",
-    "http-auth": "4.1.7",
-    "pg": "^8.7.1",
+    "dayjs": "^1.11.7",
+    "http-auth": "^4.2.0",
+    "ip": "^1.1.8",
+    "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
     "pug": "~3",
-    "sequelize": "^6.12.5"
+    "sequelize": "^6.29.3"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   }
 }

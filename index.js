@@ -1,15 +1,16 @@
 'use strict';
 const http = require('http');
 const auth = require('http-auth');
+const ip = require('ip');
 const router = require('./lib/router');
 
 const basic = auth.basic({
   realm: 'Enter username and password.',
-  file: './users.htpasswd'
+  file: './users.htpasswd',
 });
 
 const server = http.createServer(basic.check((req, res) => {
-    router.route(req, res);
+      router.route(req, res);
   })).on('error', e => {
     console.error('Server Error', e);
   }).on('clientError', e => {
@@ -18,5 +19,5 @@ const server = http.createServer(basic.check((req, res) => {
 
 const port = process.env.PORT || 8000;
 server.listen(port, () => {
-  console.info(`Listening on port:${port}`);
+  console.info(`Listening on: ${ip.address()}:${port}`);
 });
