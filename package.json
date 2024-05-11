@@ -1,6 +1,6 @@
 {
   "name": "nn-chat",
-  "version": "1.2022.320",
+  "version": "1.2023.320",
   "description": "NNチャット",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "pug": "~3"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
