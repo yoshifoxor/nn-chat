@@ -10,6 +10,8 @@
   "author": "yoshifoxor <yshs.adachi@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "http-auth": "^4.2.0",
+    "ip": "^2.0.1",
     "pug": "~3"
   },
   "engines": {
