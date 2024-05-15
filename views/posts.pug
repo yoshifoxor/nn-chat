@@ -6,13 +6,14 @@ html(lang="ja")
   body
     h1 NNチャット
     a(href="/logout") ログアウト
-    form(action="/posts", method="post")
+    form(action="/posts" method="post")
       div
-        textarea(name="content", cols="40", rows="4")
+        textarea(name="content" cols="40" rows="4")
       div
         button(type="submit") 送信
 
-  h2 投稿一覧
-  each content in contents
-    p #{content}
-    hr
+    h2 投稿一覧
+    each post in posts
+      p 送信日時: #{post.createdAt}
+      p #{post.content}
+      hr

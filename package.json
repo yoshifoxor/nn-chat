@@ -1,6 +1,6 @@
 {
   "name": "nn-chat",
-  "version": "1.2023.320",
+  "version": "1.2023.322",
   "description": "NNチャット",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,10 @@
   "author": "yoshifoxor <yshs.adachi@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@prisma/client": "4.11.0",
     "http-auth": "^4.2.0",
     "ip": "^2.0.1",
+    "prisma": "4.11.0",
     "pug": "~3"
   },
   "engines": {
