@@ -1,6 +1,6 @@
 {
   "name": "nn-chat",
-  "version": "1.2022.331",
+  "version": "1.2023.331",
   "description": "NNチャット",
   "main": "index.js",
   "scripts": {
@@ -10,16 +10,15 @@
   "author": "yoshifoxor <yshs.adachi@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@prisma/client": "4.11.0",
     "cookies": "^0.8.0",
-    "dayjs": "^1.11.7",
+    "dayjs": "^1.11.11",
     "http-auth": "^4.2.0",
-    "ip": "^1.1.8",
-    "pg": "^8.10.0",
-    "pg-hstore": "^2.3.4",
-    "pug": "~3",
-    "sequelize": "^6.29.3"
+    "ip": "^2.0.1",
+    "prisma": "4.11.0",
+    "pug": "~3"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }
