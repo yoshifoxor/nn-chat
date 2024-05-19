@@ -1,6 +1,6 @@
 {
   "name": "nn-chat",
-  "version": "1.2023.325",
+  "version": "1.2023.326",
   "description": "NNチャット",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "@prisma/client": "4.11.0",
+    "cookies": "^0.8.0",
     "dayjs": "^1.11.11",
     "http-auth": "^4.2.0",
     "ip": "^2.0.1",
