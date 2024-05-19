@@ -38,12 +38,13 @@ html(lang="ja")
                 i.bi-patch-check-fill.ms-1
             - const tooltipTitle = `<small>${post.formattedCreatedAt}</small>`
             small.card-text.text-muted.float-end(data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" title=tooltipTitle) #{post.relativeCreatedAt}
-          p.card-text.lead!= post.content
+          p.card-text.lead #{post.content}
         - const isDeletable = (user === post.postedBy || user === 'admin')
         if isDeletable
           div.card-footer.d-flex.justify-content-end
             form(action="/posts/delete" method="post")
               input(type="hidden" name="id" value=post.id)
+              input(type="hidden" name="oneTimeToken" value=oneTimeToken)
               - const deleteButtonColor = (currentTheme === 'light' ? 'btn-outline-danger' : 'btn-danger');
               button.btn.btn-sm(type="submit" class=deleteButtonColor)
                 i.bi-trash
@@ -53,6 +54,7 @@ html(lang="ja")
         div.col-12
           - const textareaColor = (currentTheme === 'light' ? '' : 'bg-dark text-white');
           textarea.form-control(name="content" rows="4" placeholder="Ctrl(Command)+Enterで送信できます" class=textareaColor)
+          input(type="hidden" name="oneTimeToken" value=oneTimeToken)
         div.col-12
           button(type="submit").btn.btn-primary.float-end
             i.bi-send
